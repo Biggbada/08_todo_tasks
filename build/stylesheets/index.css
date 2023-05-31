@@ -1,22 +1,69 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
-#app {
+input {
+  display: block;
+  width: 200px;
+}
+
+#form-container {
+  margin: 20px 0;
+  background-color: gray;
+  padding: 20px 0;
+}
+
+.flex-container {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  column-gap: 5vw;
+}
+
+.column-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+input {
+  margin: 10px 0;
 }
 
 .container-column {
   display: flex;
-  flex-flow: column nowrap;
-  width: 30vw;
-  column-gap: 5vw;
+  flex-flow: column wrap;
+  width: 20vw;
   border: 1px solid black;
+  border-radius: 10px 10px 10px 0;
+  align-items: center;
+}
+
+#column-01 h2 {
+  color: green;
+}
+
+#column-02 h2 {
+  color: rgb(255, 213, 0);
+}
+
+#column-03 h2 {
+  color: red;
+}
+
+.draggable {
+  width: 100%;
+  background-color: aqua;
 }
 
 .dragging {
   color: red;
+  border: 1px solid black;
+}
+
+.targeted {
+  border: 1px dashed brown;
 }
 
 /*# sourceMappingURL=index.css.map */
