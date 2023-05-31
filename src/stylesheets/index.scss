@@ -4,7 +4,8 @@ body {
 }
 input {
    display: block;
-   width: 200px;
+   width: 150px;
+   margin: 10px 0;
 }
 #form-container {
    margin: 20px 0;
@@ -22,9 +23,6 @@ input {
    flex-flow: column wrap;
    align-items: center;
 }
-input {
-   margin: 10px 0;
-}
 .container-column {
    display: flex;
    flex-flow: column wrap;
@@ -34,17 +32,18 @@ input {
    align-items: center;
 }
 
-#column-01 h2{
+#column-01 h2 {
    color: green;
- }
- 
- #column-02 h2{
+}
+
+#column-02 h2 {
    color: rgb(255, 213, 0);
- }
- 
- #column-03 h2{
+}
+
+#column-03 h2 {
    color: red;
- }
+}
+
 .draggable {
    width: 100%;
    background-color: aqua;

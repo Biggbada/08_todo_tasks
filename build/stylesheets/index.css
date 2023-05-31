@@ -5,7 +5,8 @@ body {
 
 input {
   display: block;
-  width: 200px;
+  width: 150px;
+  margin: 10px 0;
 }
 
 #form-container {
@@ -25,10 +26,6 @@ input {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-}
-
-input {
-  margin: 10px 0;
 }
 
 .container-column {
