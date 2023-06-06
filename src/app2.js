@@ -59,15 +59,17 @@ createFullElement("template", "#app", {
    id: "template",
    className: "template",
 });
-createFullElement("div", ".template", {
+createFullElement("div", "#template", {
    className: "draggable-element",
    draggable: "true",
 });
-const template = document.querySelector("#template");
 //gestion du drag&drop
-const draggable = document.querySelectorAll(".draggable-element");
+console.log(draggable.length);
+let draggable = document.querySelectorAll(".draggable-element");
 //drag
 for (let h = 0; h < draggable.length; h++) {
+   console.log(draggable.length);
+
    draggable[h].addEventListener("drag", (event) => {
       console.log("dragging");
    });
@@ -107,21 +109,25 @@ for (let h = 0; h < draggable.length; h++) {
       });
    }
 }
-// creation d'un element draggable
-console.log(clone);
-const cardDiv = clone.querySelectorAll(".draggable-element");
-console.log(cardDiv);
-//submit d'une nouvelle tache
+// //submit d'une nouvelle tache
+const template = document.querySelector("#template");
+console.log(template);
+console.log(template.firstChild);
+// const clone = template.firstElementChild.cloneNode(true);
+// console.log(clone);
 submitButton.addEventListener("click", (event) => {
-   for (let i = 0; i < cardDiv.length; i++) {
-      const clone = template.cloneNode(true);
-      event.preventDefault();
-      console.log(taskInput.value);
-      column01.appendChild(cardDiv[i]);
-      cardDiv[i].id = "card-div" + i;
-      cardDiv[i].textContent = taskInput.value;
-      console.log(cardDiv);
-   }
+   event.preventDefault();
+   const clone = template.firstChild.cloneNode(true);
+   console.log(clone);
+   clone.textContent = taskInput.value;
+   column01.appendChild(clone);
+   // for (let i = 0; i < clone.length; i++) {
+   //    console.log(taskInput.value);
+   //    // column01.appendChild(cardDiv[i]);
+   //    // cardDiv[i].id = "card-div" + i;
+   //    // cardDiv[i].textContent = taskInput.value;
+   //    // console.log(cardDiv);
+   // }
 });
 //*************************************************** */
 function createFullElement(tagName, source, properties) {

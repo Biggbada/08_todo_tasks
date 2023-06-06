@@ -33,7 +33,7 @@ input {
 }
 
 #column-01 h2 {
-   color: green;
+   color: red;
 }
 
 #column-02 h2 {
@@ -41,12 +41,18 @@ input {
 }
 
 #column-03 h2 {
-   color: red;
+   color: green;
 }
 
-.draggable {
+.draggable-element {
    width: 100%;
    background-color: aqua;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+   min-height: 100px;
+   border: 1px solid gray;
 }
 .dragging {
    color: red;
