@@ -1,0 +1,17 @@
+body {
+   margin: 0;
+}
+#app {
+   display: flex;
+   flex-flow: row nowrap;
+}
+.container-column {
+   display: flex;
+   flex-flow: column nowrap;
+   width: 30vw;
+   column-gap: 5vw;
+   border: 1px solid black;
+}
+.dragging {
+   color: red;
+}
